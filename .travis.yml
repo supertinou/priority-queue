@@ -1,0 +1,8 @@
+language: ruby
+rvm:
+  - 1.9.3
+notifications:
+    - ldonnet@cityway.fr
+before_script:
+  - "bundle exec rake setup"
+script: "bundle exec rake test"
