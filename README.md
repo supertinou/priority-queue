@@ -1,4 +1,6 @@
-# Ruby priority queue implementation [![Build Status](https://travis-ci.org/ldonnet/priority_queue.png)](http://travis-ci.org/ldonnet/priority_queue?branch=master) [![Dependency Status](https://gemnasium.com/ldonnet/priority_queue.png)](https://gemnasium.com/ldonnet/priority_queue) [![Code Climate](https://codeclimate.com/github/ldonnet/priority_queue.png)](https://codeclimate.com/github/ldonnet/priority_queue)
+# Ruby priority queue implementation
+
+[![Build Status](https://travis-ci.org/ldonnet/priority_queue.png)](http://travis-ci.org/ldonnet/priority_queue?branch=master) [![Dependency Status](https://gemnasium.com/ldonnet/priority_queue.png)](https://gemnasium.com/ldonnet/priority_queue) [![Code Climate](https://codeclimate.com/github/ldonnet/priority_queue.png)](https://codeclimate.com/github/ldonnet/priority_queue)
 
 This is a fibonacci-heap priority-queue implementation. That means
 
@@ -29,7 +31,7 @@ bundle exec rake setup
 ### Installing a ruby gem
 
 ```sh
-gem install PriorityQueue
+gem install priority_queue
 ```
  
 ## Usage
