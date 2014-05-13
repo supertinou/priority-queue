@@ -17,6 +17,11 @@ like.
  * Ruby 1.8 or later
  * c Compiler
 
+On Debian/Ubuntu/Kubuntu OS : 
+```sh
+sudo apt-get install git gcc
+```
+
 ## Installation
 
 ### Installing from source

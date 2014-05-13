@@ -6,8 +6,8 @@ require 'priority_queue/version'
 Gem::Specification.new do |spec|
   spec.name          = "priority_queue"
   spec.version       = PriorityQueue::VERSION
-  spec.authors       = ["Luc Donnet"]
-  spec.email         = ["ldonnet@cityway.fr"]
+  spec.authors       = ["Brian Schröder", "Luc Donnet"]
+  spec.email         = ["priority_queue@brian-schroeder.de", "luc.donnet@free.fr"]
   spec.summary       = %q{Ruby fibonacci-heap priority-queue implementation}
   spec.description   = %q{Ruby Fibonacci-heap priority-queue implementation}
   spec.homepage      = "https://github.com/ldonnet/priority-queue"
