@@ -1,6 +1,7 @@
-# Ruby extension implementing a priority queue
+# Ruby priority queue implementation
 
-## Description
+[![Build Status](https://travis-ci.org/ldonnet/priority_queue.png)](http://travis-ci.org/ldonnet/priority_queue?branch=master) [![Dependency Status](https://gemnasium.com/ldonnet/priority_queue.png)](https://gemnasium.com/ldonnet/priority_queue) [![Code Climate](https://codeclimate.com/github/ldonnet/priority_queue.png)](https://codeclimate.com/github/ldonnet/priority_queue)
+
 This is a fibonacci-heap priority-queue implementation. That means
 
     insert:                      O(1)
@@ -12,20 +13,14 @@ key operation.  That makes PriorityQueue usable for algorithms like dijkstras
 shortest path algorithm, while PQueue is more suitable for Heapsort and the
 like.
 
-## Legal stuff
-(c) 2005 Brian Schröder
-
-Please submit bugreports to priority_queue@brian-schroeder.de
-
-This extension is under the same license as ruby.
-
-Do not hold me reliable for anything that happens to you, your programs or
-anything else because of this extension. It worked for me, but there is no
-guarantee it will work for you.
-
 ## Requirements
- * Ruby 1.8
- * c Compiler  
+ * Ruby 1.8 or later
+ * c Compiler
+
+On Debian/Ubuntu/Kubuntu OS : 
+```sh
+sudo apt-get install git gcc
+```
 
 ## Installation
 
@@ -34,19 +29,16 @@ guarantee it will work for you.
 De-compress archive and enter its top directory.
 Then type:
 
-   ($ su)
-    # ruby setup.rb
-
-These simple step installs this program under the default
-location of Ruby libraries.  You can also install files into
-your favorite directory by supplying setup.rb some options.
-Try "ruby setup.rb --help".
+```sh
+bundle exec rake setup
+```
 
 ### Installing a ruby gem
 
-   ($ su)
-    # gem install PriorityQueue
-
+```sh
+gem install priority_queue
+```
+ 
 ## Usage
 
 In this priority queue implementation the queue behaves similarly to a hash
@@ -100,14 +92,14 @@ suite.
       # Initialize with start node
       active[start_node] = 0
       until active.empty?
-	u, distance = active.delete_min
-	distances[u] = distance
-	d = distance + 1
-	u.neighbours.each do | v |
-	  next unless d < distances[v] # we can't relax this one
-	  active[v] = distances[v] = d
-	  parents[v] = u
-	end    
+	      u, distance = active.delete_min
+	      distances[u] = distance
+	      d = distance + 1
+  	    u.neighbours.each do | v |
+	        next unless d < distances[v] # we can't relax this one
+	        active[v] = distances[v] = d
+	        parents[v] = u
+       	end    
       end
       parents
     end
@@ -129,5 +121,23 @@ The results are shown here
 
 ![Runtime for graphs of up to 600_000 Nodes](doc/compare_big.png "Runtime for graphs of up to 600_000 Nodes")
 
-## Todo
-  * Only write documentation once
+More Information
+----------------
+
+More information can be found on the [project website on GitHub](.).
+There is extensive usage documentation available [on the wiki](../../wiki).
+
+License
+-------
+
+This project is licensed under the MIT license, a copy of which can be found in the [LICENSE](./LICENSE.md) file.
+
+Release Notes
+-------------
+
+The release notes can be found in [CHANGELOG](./CHANGELOG.md) file
+
+Support
+-------
+
+Users looking for support should file an issue on the GitHub [issue tracking page](../../issues), or file a [pull request](../../pulls) if you have a fix available.
